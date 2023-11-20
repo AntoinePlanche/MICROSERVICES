@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+  margin: auto;
+}
+
+.App-header {
+  background-color: #333;
+  padding: 20px;
+  color: white;
+}
+
+.App-buttons {
+  display: flex;
+  justify-content: space-around; /* Cette propriété répartit équitablement l'espace horizontal */
+  width: 80%; /* Les boutons prennent 80% de la largeur de la page */
+  margin: 20px auto; /* Centre les boutons horizontalement et ajoute de l'espace en haut et en bas */
+}
+
+.button {
+  padding: 20px 0; /* Ajoute du padding vertical */
+  width: 30%; /* Chaque bouton prend 30% de la largeur du conteneur .App-buttons */
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #ddd;
+}
+
+#weather-btn {
+  background-color: #2196F3; /* Bleu */
+}
+
+#news-btn {
+  background-color: #4CAF50; /* Vert */
+}
+
+#stats-btn {
+  background-color: #f44336; /* Rouge */
+}
+
+.App-content {
+  display: flex;
+  justify-content: space-around;
+  width: 80%; /* Le contenu prend également 80% de la largeur de la page */
+  margin: auto; /* Centre le contenu horizontalement */
+}
+
+.column {
+  width: 30%; /* Chaque colonne prend 30% de la largeur du conteneur .App-content */
+  padding: 0 15px; /* Ajoutez du padding si vous voulez un espacement intérieur */
+}
+
+.data-box {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  height: 200px;
+  overflow-y: auto;
+}

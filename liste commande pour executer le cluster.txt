@@ -1,0 +1,21 @@
+minikube start
+minikube docker-env | Invoke-Expression
+minikube addons enable ingress
+cd '.\microservice1 - weather\'
+docker build -t  weather-service:v1 .
+cd '..\microservice2 - news\'
+docker build -t  news-service:v1 .
+cd '..\microservices3 - randomstats\'
+docker build -t  stats-service:v1 .
+kubectl apply -f stats-service.yaml
+cd '..\microservice2 - news\'
+kubectl apply -f news-service.yaml
+cd '..\microservice1 - weather\'
+kubectl apply -f weather-service.yaml
+kubectl get all
+cd ..
+kubectl apply -f ingress.yaml
+kubectl get ingress
+minikube ip
+minikube tunnel
+minikube delete
